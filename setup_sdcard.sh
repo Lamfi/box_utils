@@ -24,13 +24,14 @@ while true; do
         echo -e "Теперь у тебя будет всё автоматизировано, тебе не надо больше будет вводить комманды для доступа к флешке"
         echo -e "Осталась одна поправочка в боксе и жизнь в шоколаде"
         echo -e "Я так же добавлю для тебя некоторые удобные комманды"
-        sudo echo "sudo mount -o remount,exec /Download" >> sudo tee -a ~/ubuntu/root/.bashrc
-        sudo echo "alias sd=cd /Download/" >> sudo tee -a ~/ubuntu/root/.bashrc
-        sudo echo "alias debug64=WINEPREFIX=~/.wine box64 wine" >> sudo tee -a ~/ubuntu/root/.bashrc
-        sudo echo "alias debug32=WINEPREFIX=~/.wine box86 wine" >> sudo tee -a ~/ubuntu/root/.bashrc
-        sudo echo "alias sd=cd /Download/" >> sudo tee -a ~/ubuntu/root/.bashrc
-        sudo echo "alias debug64all=WINEDEBUG=-all WINEPREFIX=~/.wine box64 wine" >> sudo tee -a ~/ubuntu/root/.bashrc
-        sudo echo "alias debug32all=WINEDEBUG=-all WINEPREFIX=~/.wine box86 wine" >> sudo tee -a ~/ubuntu/root/.bashrc
+        su
+        echo "sudo mount -o remount,exec /Download" >> sudo tee -a ~/ubuntu/root/.bashrc
+        echo "alias sd=cd /Download/" >> sudo tee -a ~/ubuntu/root/.bashrc
+        echo "alias debug64=WINEPREFIX=~/.wine box64 wine" >> sudo tee -a ~/ubuntu/root/.bashrc
+        echo "alias debug32=WINEPREFIX=~/.wine box86 wine" >> sudo tee -a ~/ubuntu/root/.bashrc
+        echo "alias sd=cd /Download/" >> sudo tee -a ~/ubuntu/root/.bashrc
+        echo "alias debug64all=WINEDEBUG=-all WINEPREFIX=~/.wine box64 wine" >> sudo tee -a ~/ubuntu/root/.bashrc
+        echo "alias debug32all=WINEDEBUG=-all WINEPREFIX=~/.wine box86 wine" >> sudo tee -a ~/ubuntu/root/.bashrc
         exit
         rm ~/setup_sdcard
         echo -e "Установка завершена :) запускай start-box-root и радуйся :)"  
