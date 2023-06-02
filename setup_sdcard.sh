@@ -7,7 +7,7 @@ echo -e "Ну чё погнали"
 echo -e "Script made by me(a.belevich(SadShrimp))"
 echo -e "Для начала я добавлю кое какие штуки в .bashrc чтобы тебе не пришлось всё делать ручками"
 echo -e "А так же мне нужны Root права"
-sudo mkdir /ubuntu/download
+
 
 while true; do
     echo -e "Зайди в любой проводник перед продолжением и посмотри номер флешки обычно он идет: /storage/0403-0203/ - это мой индинтификатор флешки"
@@ -16,7 +16,7 @@ while true; do
     read choice
     case $choice in 
         1)
-        mkdir ~/ubuntu/download
+        sudo mkdir ~/ubuntu/download
         echo -e "Я создал папку для sdcard чтобы был доступ к флешке её в box64droid находится она по пути ~/ubuntu/download"
         echo -e "Теперь введи тот самый номмер тут: например 0403-0203"
         read number;
