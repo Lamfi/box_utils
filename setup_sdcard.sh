@@ -25,7 +25,7 @@ while true; do
         echo -e "Теперь у тебя будет всё автоматизировано, тебе не надо больше будет вводить комманды для доступа к флешке"
         echo -e "Осталась одна поправочка в боксе и жизнь в шоколаде"
         echo -e "Я так же добавлю для тебя некоторые удобные комманды"
-        sudo sh -c "echo 'sudo mount -o remount,exec /download' >> $ubuntu/root/.bashrc"
+        sudo sh -c "echo 'sudo mount -o remount,exec /download' >> $HOME/ubuntu/root/.bashrc"
         sudo sh -c "echo 'alias sd=cd /download/' >> $HOME/ubuntu/root/.bashrc"
         sudo sh -c "echo 'alias debug64=WINEPREFIX=~/.wine box64 wine' >>$HOME/ubuntu/root/.bashrc"
         sudo sh -c "echo 'alias debug32=WINEPREFIX=~/.wine box86 wine' >>$HOME/ubuntu/root/.bashrc"
