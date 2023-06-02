@@ -24,26 +24,20 @@ while true; do
         echo -e "Теперь у тебя будет всё автоматизировано, тебе не надо больше будет вводить комманды для доступа к флешке"
         echo -e "Осталась одна поправочка в боксе и жизнь в шоколаде"
         echo -e "Я так же добавлю для тебя некоторые удобные комманды, если ты их забудешь их можно будет вызвать при помощи box-help"
-        echo "sudo mount -o remount,exec /Download" >> .bashrc 
-        touch ~/ubuntu/usr/bin/box-help"
-        chmod +x ~/ubuntu/usr/bin/box-help"
-        echo "alias sd=cd /Download/"».bashrc
-        echo "alias debug64=WINEPREFIX=~/.wine box64 wine" ».bashrc
-        echo "alias debug32=WINEPREFIX=~/.wine box86 wine" ».bashrc
-        echo "alias sd=cd /Download/"».bashrc
-        echo "alias debug64all=WINEDEBUG=-all WINEPREFIX=~/.wine box64 wine" ».bashrc
-        echo "alias debug32all=WINEDEBUG=-all WINEPREFIX=~/.wine box86 wine" ».bashrc
-        echo "#!bin/bash" >> ~/ubuntu/usr/bin/box-help
-        echo "echo -e debug32 имя.exe - запускает win32 приложение и выводит отладочную информацию" >> ~/ubuntu/usr/bin/box-help
-        echo "echo -e debug64 имя.exe - запускает win64 приложение и выводит отладочную информацию" >> ~/ubuntu/usr/bin/box-help
-        echo "echo -e sd - открывает сразу /Download" >> ~/ubuntu/usr/bin/box-help   
-        echo "echo -e debug32all - запускает win32 приложение и выводит более подробную отладочную информацию" >> ~/ubuntu/usr/bin/box-help  
-        echo "echo -e debug64all - запускает win64 приложение и выводит более подробную отладочную информацию" >> ~/ubuntu/usr/bin/box-help 
+        echo "sudo mount -o remount,exec /Download" >>~/ubuntu/.bashrc
+        echo "alias sd=cd /Download/"»~/ubuntu/.bashrc
+        echo "alias debug64=WINEPREFIX=~/.wine box64 wine" »~/ubuntu/.bashrc
+        echo "alias debug32=WINEPREFIX=~/.wine box86 wine" »~/ubuntu/.bashrc
+        echo "alias sd=cd /Download/"»~/ubuntu/.bashrc
+        echo "alias debug64all=WINEDEBUG=-all WINEPREFIX=~/.wine box64 wine" »~/ubuntu/.bashrc
+        echo "alias debug32all=WINEDEBUG=-all WINEPREFIX=~/.wine box86 wine" »~/ubuntu/.bashrc
         rm ~/setup_sdcard
-        echo -e "Установка завершена :) запускай start-box-root и радуйся :)"       
+        echo -e "Установка завершена :) запускай start-box-root и радуйся :)"  
+        break     
         ;;
         *)
         echo "ЕСТЬ ТОЛЬКО 1) Выбирай только его либо ливай отсюда ctrl + c"
+        break
         ;;
     esac
 done
