@@ -27,12 +27,12 @@ while true; do
         echo -e "Я так же добавлю для тебя некоторые удобные комманды"
         cd ubuntu/root/
         sudo sh -c mv .bashrc tmpfile
-        sudo sh -c "echo 'sudo mount -o remount,exec /download' > $HOME/ubuntu/root/.bashrc"
-        sudo sh -c "echo 'alias sd=\"cd /download/\"' > $HOME/ubuntu/root/.bashrc"
-        sudo sh -c "echo 'alias debug64=\"WINEPREFIX=~/.wine box64 wine\"' >$HOME/ubuntu/root/.bashrc"
-        sudo sh -c "echo 'alias debug32=\"WINEPREFIX=~/.wine box86 wine\"' >$HOME/ubuntu/root/.bashrc"
-        sudo sh -c "echo 'alias debug64all=\"WINEDEBUG=-all WINEPREFIX=~/.wine box64 wine\"' >$HOME/ubuntu/root/.bashrc"
-        sudo sh -c "echo 'alias debug32all=\"WINEDEBUG=-all WINEPREFIX=~/.wine box86 wine\"' >$HOME/ubuntu/root/.bashrc"
+        sudo sh -c "echo 'sudo mount -o remount,exec /download' >> $HOME/ubuntu/root/.bashrc"
+        sudo sh -c "echo 'alias sd=\"cd /download/\"' >> $HOME/ubuntu/root/.bashrc"
+        sudo sh -c "echo 'alias debug64=\"WINEPREFIX=~/.wine box64 wine\"' >>$HOME/ubuntu/root/.bashrc"
+        sudo sh -c "echo 'alias debug32=\"WINEPREFIX=~/.wine box86 wine\"' >>$HOME/ubuntu/root/.bashrc"
+        sudo sh -c "echo 'alias debug64all=\"WINEDEBUG=-all WINEPREFIX=~/.wine box64 wine\"' >>$HOME/ubuntu/root/.bashrc"
+        sudo sh -c "echo 'alias debug32all=\"WINEDEBUG=-all WINEPREFIX=~/.wine box86 wine\"' >>$HOME/ubuntu/root/.bashrc"
         sudo sh -c "cat tmpfile >> .bashrc"
         sudo sh -c "rm tmpfile"
         rm ./setup_sdcard
