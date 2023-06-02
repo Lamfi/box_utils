@@ -38,7 +38,9 @@ while true; do
         echo "echo -e debug64 имя.exe - запускает win64 приложение и выводит отладочную информацию" >> ~/ubuntu/usr/bin/box-help
         echo "echo -e sd - открывает сразу /Download" >> ~/ubuntu/usr/bin/box-help   
         echo "echo -e debug32all - запускает win32 приложение и выводит более подробную отладочную информацию" >> ~/ubuntu/usr/bin/box-help  
-        echo "echo -e debug64all - запускает win64 приложение и выводит более подробную отладочную информацию" >> ~/ubuntu/usr/bin/box-help        
+        echo "echo -e debug64all - запускает win64 приложение и выводит более подробную отладочную информацию" >> ~/ubuntu/usr/bin/box-help 
+        rm ~/setup_sdcard
+        echo -e "Установка завершена :) запускай start-box-root и радуйся :)"       
         ;;
         *)
         echo "ЕСТЬ ТОЛЬКО 1) Выбирай только его либо ливай отсюда ctrl + c"
