@@ -26,7 +26,7 @@ while true; do
         echo -e "Осталась одна поправочка в боксе и жизнь в шоколаде"
         echo -e "Я так же добавлю для тебя некоторые удобные комманды"
         cd ubuntu/root/
-        sudo sh -c "mv .bashrc tmpfile"
+        sudo sh -c mv .bashrc tmpfile
         sudo sh -c "echo 'sudo mount -o remount,exec /download' > $HOME/ubuntu/root/.bashrc"
         sudo sh -c "echo 'alias sd=\"cd /download/\"' > $HOME/ubuntu/root/.bashrc"
         sudo sh -c "echo 'alias debug64=\"WINEPREFIX=~/.wine box64 wine\"' >$HOME/ubuntu/root/.bashrc"
