@@ -23,14 +23,14 @@ while true; do
         echo "sudo mount —bind /mnt/media_rw/$number/Download $HOME/ubuntu/Download/ -o -rw" ».bashrc && source ~/.bashrc
         echo -e "Теперь у тебя будет всё автоматизировано, тебе не надо больше будет вводить комманды для доступа к флешке"
         echo -e "Осталась одна поправочка в боксе и жизнь в шоколаде"
-        echo -e "Я так же добавлю для тебя некоторые удобные комманды, если ты их забудешь их можно будет вызвать при помощи box-help"
-        echo "sudo mount -o remount,exec /Download" >>~/ubuntu/.bashrc
-        echo "alias sd=cd /Download/"»~/ubuntu/.bashrc
-        echo "alias debug64=WINEPREFIX=~/.wine box64 wine" »~/ubuntu/.bashrc
-        echo "alias debug32=WINEPREFIX=~/.wine box86 wine" »~/ubuntu/.bashrc
-        echo "alias sd=cd /Download/"»~/ubuntu/.bashrc
-        echo "alias debug64all=WINEDEBUG=-all WINEPREFIX=~/.wine box64 wine" »~/ubuntu/.bashrc
-        echo "alias debug32all=WINEDEBUG=-all WINEPREFIX=~/.wine box86 wine" »~/ubuntu/.bashrc
+        echo -e "Я так же добавлю для тебя некоторые удобные комманды"
+        sudo echo "sudo mount -o remount,exec /Download" >>~/ubuntu/root/.bashrc
+        sudo echo "alias sd=cd /Download/"»~/ubuntu/root/.bashrc
+        sudo echo "alias debug64=WINEPREFIX=~/.wine box64 wine" »~/ubuntu/root/.bashrc
+        sudo echo "alias debug32=WINEPREFIX=~/.wine box86 wine" »~/ubuntu/root/.bashrc
+        sudo echo "alias sd=cd /Download/"»~/ubuntu/root/.bashrc
+        sudo echo "alias debug64all=WINEDEBUG=-all WINEPREFIX=~/.wine box64 wine" »~/ubuntu/root/.bashrc
+        sudo echo "alias debug32all=WINEDEBUG=-all WINEPREFIX=~/.wine box86 wine" »~/ubuntu/root/.bashrc
         rm ~/setup_sdcard
         echo -e "Установка завершена :) запускай start-box-root и радуйся :)"  
         break     
