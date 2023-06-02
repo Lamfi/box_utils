@@ -7,8 +7,7 @@ echo -e "Ну чё погнали"
 echo -e "Script made by me(a.belevich(SadShrimp))"
 echo -e "Для начала я добавлю кое какие штуки в .bashrc чтобы тебе не пришлось всё делать ручками"
 echo -e "А так же мне нужны Root права"
-su
-exit
+sudo mkdir /ubuntu/download
 
 while true; do
     echo -e "Зайди в любой проводник перед продолжением и посмотри номер флешки обычно он идет: /storage/0403-0203/ - это мой индинтификатор флешки"
