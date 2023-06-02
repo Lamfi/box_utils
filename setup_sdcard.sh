@@ -29,10 +29,9 @@ while true; do
         sudo sh -c "echo 'alias sd=cd /download/' >> $HOME/ubuntu/root/.bashrc"
         sudo sh -c "echo 'alias debug64=WINEPREFIX=~/.wine box64 wine' >>$HOME/ubuntu/root/.bashrc"
         sudo sh -c "echo 'alias debug32=WINEPREFIX=~/.wine box86 wine' >>$HOME/ubuntu/root/.bashrc"
-        sudo sh -c "echo 'alias sd=cd /Download/' >> $HOME/ubuntu/root/.bashrc"
         sudo sh -c "echo 'alias debug64all=WINEDEBUG=-all WINEPREFIX=~/.wine box64 wine' >> $HOME/ubuntu/root/.bashrc"
         sudo sh -c "echo 'alias debug32all=WINEDEBUG=-all WINEPREFIX=~/.wine box86 wine' >>$HOME/ubuntu/root/.bashrc"
-        rm ~/.setup_sdcard
+        rm ./setup_sdcard
         echo -e "Установка завершена :) запускай start-box-root и радуйся :)"  
         break     
         ;;
