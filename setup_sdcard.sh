@@ -185,13 +185,13 @@ while true; do
         sudo rm ~/.bashrc
         cd $HOME/Box4Droid/ubuntu/root/
         sudo rm .bashrc
-        sudo su -c "cat .bashrc_backup >> $HOME/Box4Droid/ubuntu/root/.bashrc"
+        sudo su -c "cat .bashrc_backup > $HOME/Box4Droid/ubuntu/root/.bashrc"
     fi
     if test -f $HOME/ubuntu/root/.bashrc_backup; then
         sudo rm ~/.bashrc
         cd $HOME/ubuntu/root/
         sudo rm .bashrc
-        sudo su -c "cat .bashrc_backup >> $HOME/ubuntu/root/.bashrc"
+        sudo su -c "cat .bashrc_backup > .bashrc"
     fi
     echo -e "Очистка завершена"
     exit
