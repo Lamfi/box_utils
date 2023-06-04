@@ -19,6 +19,7 @@ function set_storage_ilya(){
     echo -e "Ваш(И) UUID $uuid $uuid2"
     sudo mkdir /storage/emulated/0/external
     sudo mkdir /storage/$uuid/external
+    sudo mkdir ~/ubuntu/external
     sudo mkdir ~/ubuntu/external/$uuid
     sudo mkdir ~/ubuntu/external/0
     echo "sudo mount --bind /storage/emulated/0/external $HOME/ubuntu/external/0 -o -rw" >> .bashrc
@@ -44,8 +45,10 @@ function set_storage_ilya(){
     echo -e "Был выбран 1)/mnt(Быстрый способ)"
     echo -e "Теперь введите уникальный индентификатор флешки/накопителя - у меня это 0403-0201"
     echo -e "Посмотреть можно в ES проводник либо любом другом проводнике"
+    echo -e "Можно ввести два накопителя через пробел"
     read uuid uuid2
     echo -e "Ваш(И) UUID $uuid $uuid2"
+    sudo mkdir ~/ubuntu/external
     sudo mkdir /storage/emulated/0/external
     sudo mkdir /storage/$uuid/external
     sudo mkdir ~/ubuntu/external/$uuid
@@ -90,6 +93,7 @@ function set_storage_herick(){
     echo -e "Ваш(И) UUID $uuid $uuid2"
     sudo mkdir /storage/emulated/0/external
     sudo mkdir /storage/$uuid/external
+    sudo mkdir ~/Box4Droid/ubuntu/external
     sudo mkdir ~/Box4Droid/ubuntu/external/$uuid
     sudo mkdir ~/Box4Droid/ubuntu/external/0
     echo "sudo mount --bind /storage/emulated/0/external $HOME/Box4Droid/ubuntu/external/0 -o -rw" >> .bashrc
@@ -119,6 +123,7 @@ function set_storage_herick(){
     echo -e "Ваш(И) UUID $uuid $uuid2"
     sudo mkdir /storage/emulated/0/external
     sudo mkdir /storage/$uuid/external
+    sudo mkdir ~/Box4Droid/ubuntu/external
     sudo mkdir $HOME/Box4Droid/ubuntu/external/$uuid
     sudo mkdir $HOME/Box4Droid/ubuntu/external/0
     echo "sudo mount --bind /storage/emulated/0/external $HOME/Box4Droid/ubuntu/external/0 -o -rw" >> .bashrc
