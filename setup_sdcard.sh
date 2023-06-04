@@ -185,7 +185,8 @@ while true; do
         sudo rm ~/.bashrc
         sudo rm ~/Box4Droid/ubuntu/root/.bashrc
         sudo sh -c "cat ~/Box4Droid/ubuntu/root/.bashrc_backup >> $HOME/Box4Droid/ubuntu/root/.bashrc"
-    elif test -f $HOME/ubuntu/root/.bashrc_backup; then
+    fi
+    if test -f $HOME/ubuntu/root/.bashrc_backup; then
         sudo rm ~/.bashrc
         sudo rm ~/ubuntu/root/.bashrc
         sudo sh -c "cat ~/ubuntu/root/.bashrc_backup >> $HOME/ubuntu/root/.bashrc"
