@@ -15,6 +15,8 @@ function set_storage_ilya(){
     echo -e "Был выбран 1)/storage(Медленный способ)"
     echo -e "Теперь введите уникальный индентификатор флешки/накопителя - у меня это 0403-0201"
     echo -e "Посмотреть можно в ES проводник либо любом другом проводнике"
+    echo -e "Можно ввести два накопителя через пробел"
+    sudo mkdir ~/ubuntu/external
     read uuid uuid2
     echo -e "Ваш(И) UUID $uuid $uuid2"
     sudo mkdir /storage/emulated/0/external
@@ -46,6 +48,7 @@ function set_storage_ilya(){
     echo -e "Теперь введите уникальный индентификатор флешки/накопителя - у меня это 0403-0201"
     echo -e "Посмотреть можно в ES проводник либо любом другом проводнике"
     echo -e "Можно ввести два накопителя через пробел"
+    sudo mkdir ~/ubuntu/external
     read uuid uuid2
     echo -e "Ваш(И) UUID $uuid $uuid2"
     sudo mkdir ~/ubuntu/external
@@ -83,17 +86,18 @@ function set_storage_herick(){
     echo -e "Теперь выберите из какого пути брать ваш накопитель"
     echo -e "1)/storage(Медленее) - для него не нужен модуль ExSdCard"
     echo -e "2)/mnt/media_rw(Быстрее) - для данного пути нужен модуль ExSdCard"
+    echo -e "Можно ввести два накопителя через пробел"
     read set_choice
     case $set_choice in
     1)
     echo -e "Был выбран 1)/storage(Медленный способ)"
     echo -e "Теперь введите уникальный индентификатор флешки/накопителя - у меня это 0403-0201"
     echo -e "Посмотреть можно в ES проводник либо любом другом проводнике"
+    sudo mkdir ~/Box4Droid/ubuntu/external
     read uuid uuid2
     echo -e "Ваш(И) UUID $uuid $uuid2"
     sudo mkdir /storage/emulated/0/external
     sudo mkdir /storage/$uuid/external
-    sudo mkdir ~/Box4Droid/ubuntu/external
     sudo mkdir ~/Box4Droid/ubuntu/external/$uuid
     sudo mkdir ~/Box4Droid/ubuntu/external/0
     echo "sudo mount --bind /storage/emulated/0/external $HOME/Box4Droid/ubuntu/external/0 -o -rw" >> .bashrc
@@ -119,6 +123,8 @@ function set_storage_herick(){
     echo -e "Был выбран 1)/mnt(Быстрый способ)"
     echo -e "Теперь введите уникальный индентификатор флешки/накопителя - у меня это 0403-0201"
     echo -e "Посмотреть можно в ES проводник либо любом другом проводнике"
+    echo -e "Можно ввести два накопителя через пробел"
+    sudo mkdir ~/Box4Droid/ubuntu/external
     read uuid uuid2
     echo -e "Ваш(И) UUID $uuid $uuid2"
     sudo mkdir /storage/emulated/0/external
