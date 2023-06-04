@@ -154,49 +154,49 @@ while true; do
     echo -e "2)Восстановить .bashrc для переустановки монтирования"
     read choice
     case $choice in 
+    1)
+    clear
+    echo -e "Выберите Box для которого нужно прикрутить раздел"
+    echo -e "1)Box64Droid by Ilya"
+    echo -e "2)Box4Droid by Herick"
+    read choice_box
+        case $choice_box in
         1)
-        clear
-        echo -e "Выберите Box для которого нужно прикрутить раздел"
-        echo -e "1)Box64Droid by Ilya"
-        echo -e "2)Box4Droid by Herick"
-        read choice_box
-            case $choice_box in
-            1)
-            echo -e "Был выбран Box64Droid by Ilya"
-            echo -e "Теперь введите уникальный индинтификатор вашего устройства"
-            set_storage_ilya
-            break
-            ;;
-            2)
-            echo -e "Был выбран Box64Droid by Ilya"
-            echo -e "Теперь введите уникальный индинтификатор вашего устройства"
-            set_storage_herick
-            break
-            ;;
-            *)
-            echo -e "Неправильный выбор попробуй ещё раз либо выйди при помощи ctrl + c"
-            break
-            ;;
-            esac
+        echo -e "Был выбран Box64Droid by Ilya"
+        echo -e "Теперь введите уникальный индинтификатор вашего устройства"
+        set_storage_ilya
         break
         ;;
-    2)
-    echo -e "Проверка и очистка файлов"
-
-    if [ -f ~/Box4Droid/ubuntu/root/.bashrc_backup ]; then
-    sudo rm ~/.bashrc
-    sudo su -c "rm ~/Box4Droid/ubuntu/root/.bashrc"
-    sudo sh -c "cat .bashrc_backup >> $HOME/Box4Droid/ubuntu/root/.bashrc"
-    else if [  -f ~/ubuntu/root/.bashrc_backup ]; then
-    sudo rm ~/.bashrc
-    sudo su -c "rm ~/ubuntu/root/.bashrc"
-    sudo sh -c "cat .bashrc_backup >> $HOME/ubuntu/root/.bashrc"
-    fi
-    echo -e "Очистка завершена"
-    ;;
-    *)
-    echo -e "Есть 1 большего не дано, для выхода ctrl + c"
+        2)
+        echo -e "Был выбран Box64Droid by Ilya"
+        echo -e "Теперь введите уникальный индинтификатор вашего устройства"
+        set_storage_herick
+        break
+        ;;
+        *)
+        echo -e "Неправильный выбор попробуй ещё раз либо выйди при помощи ctrl + c"
+        break
+        ;;
+        esac
     break
     ;;
+    2)
+        echo -e "Проверка и очистка файлов"
+        if [ -f ~/Box4Droid/ubuntu/root/.bashrc_backup ]; then
+        sudo rm ~/.bashrc
+        sudo su -c "rm ~/Box4Droid/ubuntu/root/.bashrc"
+        sudo sh -c "cat .bashrc_backup >> $HOME/Box4Droid/ubuntu/root/.bashrc"
+        elif [  -f ~/ubuntu/root/.bashrc_backup ]; then
+        sudo rm ~/.bashrc
+        sudo su -c "rm ~/ubuntu/root/.bashrc"
+        sudo sh -c "cat .bashrc_backup >> $HOME/ubuntu/root/.bashrc"
+        fi
+        echo -e "Очистка завершена"
+        break
+    ;;
+    *)
+        echo -e "Есть 1 большего не дано, для выхода ctrl + c"
+        break
+        ;;
     esac
 done
