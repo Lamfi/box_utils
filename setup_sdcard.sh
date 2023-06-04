@@ -27,7 +27,7 @@ function set_storage_ilya(){
     sudo sh -c "mv .bashrc .bashrc_backup"
     sudo sh -c "echo 'sudo mount -o remount,exec /external/0' > $HOME/ubuntu/root/.bashrc"
     sudo sh -c "echo 'sudo mount -o remount,exec /external/$uuid' > $HOME/ubuntu/root/.bashrc"
-    if[ "$uuid2" != "" ]; then
+    if [ "$uuid2" != "" ]; then
         sudo mkdir ~/ubuntu/external/$uuid2
         sudo mkdir /storage/$uuid2/external
         echo "sudo mount --bind /storage/$uuid2/external $HOME/ubuntu/external/$uuid2 -o -rw" >> .bashrc
