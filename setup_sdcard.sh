@@ -38,7 +38,7 @@ function set_storage_ilya(){
     sudo sh -c "echo 'alias debug32=\"WINEPREFIX=~/.wine box86 wine\"' >> $HOME/ubuntu/root/.bashrc"
     sudo sh -c "cat .bashrc_backup >> $HOME/ubuntu/root/.bashrc"
     echo -e "Установка завершена приятного пользования"
-    break;
+    break
     ;;
     2)
     echo -e "Был выбран 1)/mnt(Быстрый способ)"
@@ -67,7 +67,7 @@ function set_storage_ilya(){
     sudo sh -c "echo 'alias debug32=\"WINEPREFIX=~/.wine box86 wine\"' >> $HOME/ubuntu/root/.bashrc"
     sudo sh -c "cat .bashrc_backup >> $HOME/ubuntu/root/.bashrc"
     echo -e "Установка завершена приятного пользования"
-    break;
+    break
     ;;
     *)
     echo -e "Неправильный выбор попробуй ещё раз либо выйди при помощи ctrl + c"
@@ -109,7 +109,7 @@ function set_storage_herick(){
     sudo sh -c "echo 'alias debug32=\"WINEPREFIX=~/.wine box86 wine\"' >> $HOME/Box4Droid/ubuntu/root/.bashrc"
     sudo sh -c "cat .bashrc_backup >> $HOME/Box4Droid/ubuntu/root/.bashrc"
     echo -e "Установка завершена приятного пользования"
-    break;
+    break
     ;;
     2)
     echo -e "Был выбран 1)/mnt(Быстрый способ)"
@@ -138,7 +138,7 @@ function set_storage_herick(){
     sudo sh -c "echo 'alias debug32=\"WINEPREFIX=~/.wine box86 wine\"' >> $HOME/Box4Droid/ubuntu/root/.bashrc"
     sudo sh -c "cat .bashrc_backup >> $HOME/Box4Droid/ubuntu/root/.bashrc"
     echo -e "Установка завершена приятного пользования"
-    break;
+    break
     ;;
     *)
     echo -e "Неправильный выбор попробуй ещё раз либо выйди при помощи ctrl + c"
@@ -191,7 +191,7 @@ while true; do
     sudo su -c "rm ~/ubuntu/root/.bashrc"
     sudo sh -c "cat .bashrc_backup >> $HOME/ubuntu/root/.bashrc"
     else
-    echo -e "Файл .bashrc_backup не найден"
+    echo -e "Скрипт до этого не был установлен"
     fi
     echo -e "Очистка завершена"
     break
