@@ -19,20 +19,17 @@ function set_storage_ilya(){
     sudo mkdir ~/ubuntu/external
     read uuid uuid2
     echo -e "Ваш(И) UUID $uuid $uuid2"
-    sudo mkdir /storage/emulated/0/external
-    sudo mkdir /storage/$uuid/external
-    sudo mkdir ~/ubuntu/external
     sudo mkdir ~/ubuntu/external/$uuid
     sudo mkdir ~/ubuntu/external/0
-    echo "sudo mount --bind /storage/emulated/0/external $HOME/ubuntu/external/0 -o -rw" >> .bashrc
-    echo "sudo mount --bind /storage/$uuid/external $HOME/ubuntu/external/$uuid -o -rw" >> .bashrc
+    echo "sudo mount --bind /storage/emulated/0/Download $HOME/ubuntu/external/0 -o -rw" >> .bashrc
+    echo "sudo mount --bind /storage/$uuid/Download $HOME/ubuntu/external/$uuid -o -rw" >> .bashrc
     cd $HOME/ubuntu/root
     sudo sh -c "mv .bashrc .bashrc_backup"
     sudo sh -c "echo 'sudo mount -o remount,exec /external/0' > $HOME/ubuntu/root/.bashrc"
-    sudo sh -c "echo 'sudo mount -o remount,exec /external/$uuid' > $HOME/ubuntu/root/.bashrc"
+    sudo sh -c "echo 'sudo mount -o remount,exec /external/$uuid' >> $HOME/ubuntu/root/.bashrc"
     if [ "$uuid2" != "" ]; then
         sudo mkdir ~/ubuntu/external/$uuid2
-        sudo mkdir /storage/$uuid2/external
+        sudo mkdir /storage/$uuid2/Download
         echo "sudo mount --bind /storage/$uuid2/external $HOME/ubuntu/external/$uuid2 -o -rw" >> .bashrc
         sudo sh -c "echo 'sudo mount -o remount,exec /external/$uuid2' > $HOME/ubuntu/root/.bashrc"
     fi
@@ -51,21 +48,18 @@ function set_storage_ilya(){
     sudo mkdir ~/ubuntu/external
     read uuid uuid2
     echo -e "Ваш(И) UUID $uuid $uuid2"
-    sudo mkdir ~/ubuntu/external
-    sudo mkdir /storage/emulated/0/external
-    sudo mkdir /storage/$uuid/external
     sudo mkdir ~/ubuntu/external/$uuid
     sudo mkdir ~/ubuntu/external/0
-    echo "sudo mount --bind /storage/emulated/0/external $HOME/ubuntu/external/0 -o -rw" >> .bashrc
-    echo "sudo mount --bind /mnt/media_rw/$uuid/external $HOME/ubuntu/external/$uuid -o -rw" >> .bashrc
+    echo "sudo mount --bind /storage/emulated/0/Download $HOME/ubuntu/external/0 -o -rw" >> .bashrc
+    echo "sudo mount --bind /mnt/media_rw/$uuid/Download $HOME/ubuntu/external/$uuid -o -rw" >> .bashrc
     cd $HOME/ubuntu/root
     sudo sh -c "mv .bashrc .bashrc_backup"
     sudo sh -c "echo 'sudo mount -o remount,exec /external/0' > $HOME/ubuntu/root/.bashrc"
-    sudo sh -c "echo 'sudo mount -o remount,exec /external/$uuid' > $HOME/ubuntu/root/.bashrc"
+    sudo sh -c "echo 'sudo mount -o remount,exec /external/$uuid' >> $HOME/ubuntu/root/.bashrc"
     if [ "$uuid2" != "" ]; then
         sudo mkdir ~/ubuntu/external/$uuid2
-        sudo mkdir /storage/$uuid2/external
-        echo "sudo mount --bind /mnt/media_rw/$uuid2/external $HOME/ubuntu/external/$uuid2 -o -rw" >> .bashrc
+        sudo mkdir /storage/$uuid2/Download
+        echo "sudo mount --bind /mnt/media_rw/$uuid2/Download $HOME/ubuntu/external/$uuid2 -o -rw" >> .bashrc
         sudo sh -c "echo 'sudo mount -o remount,exec /external/$uuid2' > $HOME/ubuntu/root/.bashrc"
     fi
     sudo sh -c "echo 'alias sd=\"cd /download/\"' >> $HOME/ubuntu/root/.bashrc"
@@ -96,20 +90,17 @@ function set_storage_herick(){
     sudo mkdir ~/Box4Droid/ubuntu/external
     read uuid uuid2
     echo -e "Ваш(И) UUID $uuid $uuid2"
-    sudo mkdir /storage/emulated/0/external
-    sudo mkdir /storage/$uuid/external
     sudo mkdir ~/Box4Droid/ubuntu/external/$uuid
     sudo mkdir ~/Box4Droid/ubuntu/external/0
-    echo "sudo mount --bind /storage/emulated/0/external $HOME/Box4Droid/ubuntu/external/0 -o -rw" >> .bashrc
-    echo "sudo mount --bind /storage/$uuid/external $HOME/Box4Droid/ubuntu/external/$uuid -o -rw" >> .bashrc
+    echo "sudo mount --bind /storage/emulated/0/Download $HOME/Box4Droid/ubuntu/external/0 -o -rw" >> .bashrc
+    echo "sudo mount --bind /storage/$uuid/Download $HOME/Box4Droid/ubuntu/external/$uuid -o -rw" >> .bashrc
     cd $HOME/Box4Droid/ubuntu/root
     sudo sh -c "mv .bashrc .bashrc_backup"
     sudo sh -c "echo 'sudo mount -o remount,exec /external/0' > $HOME/Box4Droid/ubuntu/root/.bashrc"
-    sudo sh -c "echo 'sudo mount -o remount,exec /external/$uuid' > $HOME/Box4Droid/ubuntu/root/.bashrc"
+    sudo sh -c "echo 'sudo mount -o remount,exec /external/$uuid' >> $HOME/Box4Droid/ubuntu/root/.bashrc"
     if [ "$uuid2" != "" ]; then
         sudo mkdir $HOME/Box4Droid/ubuntu/external/$uuid2
-        sudo mkdir /storage/$uuid2/external
-        echo "sudo mount --bind /storage/$uuid2/external $HOME/Box4Droid/ubuntu/external/$uuid2 -o -rw" >> .bashrc
+        echo "sudo mount --bind /storage/$uuid2/Download $HOME/Box4Droid/ubuntu/external/$uuid2 -o -rw" >> .bashrc
         sudo sh -c "echo 'sudo mount -o remount,exec /external/$uuid2' > $HOME/Box4Droid/ubuntu/root/.bashrc"
     fi
     sudo sh -c "echo 'alias sd=\"cd /download/\"' >> $HOME/Box4Droid/ubuntu/root/.bashrc"
@@ -127,21 +118,18 @@ function set_storage_herick(){
     sudo mkdir ~/Box4Droid/ubuntu/external
     read uuid uuid2
     echo -e "Ваш(И) UUID $uuid $uuid2"
-    sudo mkdir /storage/emulated/0/external
-    sudo mkdir /storage/$uuid/external
     sudo mkdir ~/Box4Droid/ubuntu/external
     sudo mkdir $HOME/Box4Droid/ubuntu/external/$uuid
     sudo mkdir $HOME/Box4Droid/ubuntu/external/0
-    echo "sudo mount --bind /storage/emulated/0/external $HOME/Box4Droid/ubuntu/external/0 -o -rw" >> .bashrc
-    echo "sudo mount --bind /mnt/media_rw/$uuid/external $HOME/Box4Droid/ubuntu/external/$uuid -o -rw" >> .bashrc
+    echo "sudo mount --bind /storage/emulated/0/Download $HOME/Box4Droid/ubuntu/external/0 -o -rw" >> .bashrc
+    echo "sudo mount --bind /mnt/media_rw/$uuid/Download $HOME/Box4Droid/ubuntu/external/$uuid -o -rw" >> .bashrc
     cd $HOME/Box4Droid/ubuntu/root
     sudo sh -c "mv .bashrc .bashrc_backup"
     sudo sh -c "echo 'sudo mount -o remount,exec /external/0' > $HOME/Box4Droid/ubuntu/root/.bashrc"
-    sudo sh -c "echo 'sudo mount -o remount,exec /external/$uuid' > $HOME/Box4Droid/ubuntu/root/.bashrc"
+    sudo sh -c "echo 'sudo mount -o remount,exec /external/$uuid' >> $HOME/Box4Droid/ubuntu/root/.bashrc"
     if [ "$uuid2" != "" ]; then
         sudo mkdir ~/ubuntu/external/$uuid2
-        sudo mkdir /storage/$uuid2/external
-        echo "sudo mount --bind /mnt/media_rw/$uuid2/external $HOME/Box4Droid/ubuntu/external/$uuid2 -o -rw" >> .bashrc
+        echo "sudo mount --bind /mnt/media_rw/$uuid2/Download $HOME/Box4Droid/ubuntu/external/$uuid2 -o -rw" >> .bashrc
         sudo sh -c "echo 'sudo mount -o remount,exec /external/$uuid2' > $HOME/Box4Droid/ubuntu/root/.bashrc"
     fi
     sudo sh -c "echo 'alias sd=\"cd /download/\"' >> $HOME/Box4Droid/ubuntu/root/.bashrc"
@@ -194,16 +182,16 @@ while true; do
     2)
     echo -e "Проверка и очистка файлов"
     if [ -f ~/Box4Droid/ubuntu/root/.bashrc_backup ]; then
-    sudo rm ~/.bashrc
-    sudo su -c "rm ~/Box4Droid/ubuntu/root/.bashrc"
-    sudo sh -c "cat .bashrc_backup >> $HOME/Box4Droid/ubuntu/root/.bashrc"
+        sudo rm ~/.bashrc
+        sudo su -c "rm ~/Box4Droid/ubuntu/root/.bashrc"
+        sudo sh -c "cat .bashrc_backup >> $HOME/Box4Droid/ubuntu/root/.bashrc"
     elif [ -f ~/ubuntu/root/.bashrc_backup ]; then
-    sudo rm ~/.bashrc
-    sudo su -c "rm ~/ubuntu/root/.bashrc"
-    sudo sh -c "cat .bashrc_backup >> $HOME/ubuntu/root/.bashrc"
+        sudo rm ~/.bashrc
+        sudo su -c "rm ~/ubuntu/root/.bashrc"
+        sudo sh -c "cat .bashrc_backup >> $HOME/ubuntu/root/.bashrc"
     else
-    echo -e "Скрипт до этого не был установлен"
-    fi
+        echo -e "Скрипт до этого не был установлен"
+    fi.
     echo -e "Очистка завершена"
     exit
     break
