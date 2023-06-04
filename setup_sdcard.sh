@@ -189,16 +189,14 @@ while true; do
         sudo rm ~/.bashrc
         sudo su -c "rm ~/ubuntu/root/.bashrc"
         sudo sh -c "cat .bashrc_backup >> $HOME/ubuntu/root/.bashrc"
-    else
-        echo -e "Скрипт до этого не был установлен"
     fi
     echo -e "Очистка завершена"
     exit
     break
     ;;
     *)
-        echo -e "Есть 1 большего не дано, для выхода ctrl + c"
-        break
-        ;;
+    echo -e "Есть 1 большего не дано, для выхода ctrl + c"
+    break
+    ;;
     esac
 done
