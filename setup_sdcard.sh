@@ -183,7 +183,7 @@ while true; do
     2)
     echo -e "Проверка и очистка файлов"
 
-    if [  -f ~/Box4Droid/ubuntu/root/.bashrc_backup ]; then
+    if [ -f ~/Box4Droid/ubuntu/root/.bashrc_backup ]; then
     sudo rm ~/.bashrc
     sudo su -c "rm ~/Box4Droid/ubuntu/root/.bashrc"
     sudo sh -c "cat .bashrc_backup >> $HOME/Box4Droid/ubuntu/root/.bashrc"
