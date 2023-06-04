@@ -27,7 +27,7 @@ function set_storage_ilya(){
     sudo sh -c "mv .bashrc .bashrc_backup"
     sudo sh -c "echo 'sudo mount -o remount,exec /external/0' > $HOME/ubuntu/root/.bashrc"
     sudo sh -c "echo 'sudo mount -o remount,exec /external/$uuid' > $HOME/ubuntu/root/.bashrc"
-    if [ $uuid2 != null ]; then
+    if[ $uuid2 != "" ]; then
         sudo mkdir ~/ubuntu/external/$uuid2
         sudo mkdir /storage/$uuid2/external
         echo "sudo mount --bind /storage/$uuid2/external $HOME/ubuntu/external/$uuid2 -o -rw" >> .bashrc
@@ -56,7 +56,7 @@ function set_storage_ilya(){
     sudo sh -c "mv .bashrc .bashrc_backup"
     sudo sh -c "echo 'sudo mount -o remount,exec /external/0' > $HOME/ubuntu/root/.bashrc"
     sudo sh -c "echo 'sudo mount -o remount,exec /external/$uuid' > $HOME/ubuntu/root/.bashrc"
-    if [ $uuid2 != null ]; then
+    if [ $uuid2 != "" ]; then
         sudo mkdir ~/ubuntu/external/$uuid2
         sudo mkdir /storage/$uuid2/external
         echo "sudo mount --bind /mnt/media_rw/$uuid2/external $HOME/ubuntu/external/$uuid2 -o -rw" >> .bashrc
@@ -98,7 +98,7 @@ function set_storage_herick(){
     sudo sh -c "mv .bashrc .bashrc_backup"
     sudo sh -c "echo 'sudo mount -o remount,exec /external/0' > $HOME/Box4Droid/ubuntu/root/.bashrc"
     sudo sh -c "echo 'sudo mount -o remount,exec /external/$uuid' > $HOME/Box4Droid/ubuntu/root/.bashrc"
-    if [ $uuid2 != null ]; then
+    if [ $uuid2 != "" ]; then
         sudo mkdir $HOME/Box4Droid/ubuntu/external/$uuid2
         sudo mkdir /storage/$uuid2/external
         echo "sudo mount --bind /storage/$uuid2/external $HOME/Box4Droid/ubuntu/external/$uuid2 -o -rw" >> .bashrc
@@ -127,7 +127,7 @@ function set_storage_herick(){
     sudo sh -c "mv .bashrc .bashrc_backup"
     sudo sh -c "echo 'sudo mount -o remount,exec /external/0' > $HOME/Box4Droid/ubuntu/root/.bashrc"
     sudo sh -c "echo 'sudo mount -o remount,exec /external/$uuid' > $HOME/Box4Droid/ubuntu/root/.bashrc"
-    if [ $uuid2 != null ]; then
+    if [ $uuid2 != "" ]; then
         sudo mkdir ~/ubuntu/external/$uuid2
         sudo mkdir /storage/$uuid2/external
         echo "sudo mount --bind /mnt/media_rw/$uuid2/external $HOME/Box4Droid/ubuntu/external/$uuid2 -o -rw" >> .bashrc
