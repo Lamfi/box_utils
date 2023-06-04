@@ -195,11 +195,11 @@ while true; do
         sudo rm ~/.bashrc
         cd $HOME/ubuntu/root/
         sudo rm .bashrc
-        sudo su -c "echo '' > $HOME/ubuntu/root/.bashrc"
-        sudo su -c "cat .bashrc_backup >> $HOME/ubuntu/root/.bashrc"
+        sudo su -c "echo '' > $HOME/ubuntu/root/.bashrc && cat .bashrc_backup >> $HOME/ubuntu/root/.bashrc"
+        exit
         echo -e "Очистка завершена"
     fi
-    exit
+
     break
     ;;
     *)
