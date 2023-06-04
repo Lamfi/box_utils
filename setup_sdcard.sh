@@ -181,18 +181,20 @@ while true; do
     break
     ;;
     2)
-        echo -e "Проверка и очистка файлов"
-        if [ -f ~/Box4Droid/ubuntu/root/.bashrc_backup ]; then
-        sudo rm ~/.bashrc
-        sudo su -c "rm ~/Box4Droid/ubuntu/root/.bashrc"
-        sudo sh -c "cat .bashrc_backup >> $HOME/Box4Droid/ubuntu/root/.bashrc"
-        elif [  -f ~/ubuntu/root/.bashrc_backup ]; then
-        sudo rm ~/.bashrc
-        sudo su -c "rm ~/ubuntu/root/.bashrc"
-        sudo sh -c "cat .bashrc_backup >> $HOME/ubuntu/root/.bashrc"
-        fi
-        echo -e "Очистка завершена"
-        break
+    echo -e "Проверка и очистка файлов"
+    if [ -f ~/Box4Droid/ubuntu/root/.bashrc_backup ]; then
+    sudo rm ~/.bashrc
+    sudo su -c "rm ~/Box4Droid/ubuntu/root/.bashrc"
+    sudo sh -c "cat .bashrc_backup >> $HOME/Box4Droid/ubuntu/root/.bashrc"
+    elif [ -f ~/ubuntu/root/.bashrc_backup ]; then
+    sudo rm ~/.bashrc
+    sudo su -c "rm ~/ubuntu/root/.bashrc"
+    sudo sh -c "cat .bashrc_backup >> $HOME/ubuntu/root/.bashrc"
+    else
+    echo -e "Файл .bashrc_backup не найден"
+    fi
+    echo -e "Очистка завершена"
+    break
     ;;
     *)
         echo -e "Есть 1 большего не дано, для выхода ctrl + c"
