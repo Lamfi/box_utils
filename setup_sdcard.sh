@@ -199,6 +199,7 @@ while true; do
     echo -e "Скрипт до этого не был установлен"
     fi
     echo -e "Очистка завершена"
+    exit
     break
     ;;
     *)
