@@ -191,7 +191,7 @@ while true; do
         sudo sh -c "cat .bashrc_backup >> $HOME/ubuntu/root/.bashrc"
     else
         echo -e "Скрипт до этого не был установлен"
-    fi.
+    fi
     echo -e "Очистка завершена"
     exit
     break
